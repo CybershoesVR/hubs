@@ -1262,6 +1262,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         initialIsFavorited: data.subscriptions.favorites
       });
 
+      const scriptURL = data.hubs[0].user_data?.script_url;
+      if (scriptURL) {
+        try {
+          await import(/* webpackIgnore: true */ scriptURL);
+        } catch (err) {
+          console.error(`Custom script for this room failed to load. Reason: ${err}`);
+        }
+      }
+
       await presenceSync.promise;
       handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data, permsToken, hubChannel, events);
     })
