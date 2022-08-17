@@ -39,15 +39,12 @@ export function RoomSettingsSidebar({
   const entryMode = watch("entry_mode");
   const spawnAndMoveMedia = watch("member_permissions.spawn_and_move_media");
 
-  useEffect(
-    () => {
-      if (!spawnAndMoveMedia) {
-        setValue("member_permissions.spawn_camera", false, { shouldDirty: true });
-        setValue("member_permissions.pin_objects", false, { shouldDirty: true });
-      }
-    },
-    [spawnAndMoveMedia, setValue]
-  );
+  useEffect(() => {
+    if (!spawnAndMoveMedia) {
+      setValue("member_permissions.spawn_camera", false, { shouldDirty: true });
+      setValue("member_permissions.pin_objects", false, { shouldDirty: true });
+    }
+  }, [spawnAndMoveMedia, setValue]);
 
   return (
     <Sidebar
@@ -197,6 +194,16 @@ export function RoomSettingsSidebar({
             />
           </div>
         </InputField>
+        <TextInputField
+          name="user_data.script_url"
+          type="text"
+          autoComplete="off"
+          // eslint-disable-next-line @calm/react-intl/missing-formatted-message
+          label="Custom Script"
+          placeholder="Script URL"
+          ref={register}
+          fullWidth
+        />
         <ApplyButton type="submit" />
       </Column>
     </Sidebar>
