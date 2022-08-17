@@ -126,8 +126,8 @@ export const SCHEMA = {
         showFPSCounter: { type: "bool", default: false },
         allowMultipleHubsInstances: { type: "bool", default: false },
         disableIdleDetection: { type: "bool", default: false },
-        fastRoomSwitching: { type: "bool", default: false },
-        lazyLoadSceneMedia: { type: "bool", default: false },
+        fastRoomSwitching: { type: "bool", default: true },
+        lazyLoadSceneMedia: { type: "bool", default: true },
         preferMobileObjectInfoPanel: { type: "bool", default: false },
         // if unset, maxResolution = screen resolution
         maxResolutionWidth: { type: "number", default: undefined },
