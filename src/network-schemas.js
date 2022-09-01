@@ -111,7 +111,15 @@ function registerNetworkSchemas() {
         component: "media-pdf",
         property: "index"
       },
-      "pinnable"
+      "pinnable",
+      {
+        component: "media-video",
+        property: "src"
+      },
+      {
+        component: "media-image",
+        property: "src"
+      }
     ],
     nonAuthorizedComponents: [
       {
@@ -169,6 +177,14 @@ function registerNetworkSchemas() {
       {
         component: "media-video",
         property: "time"
+      },
+      {
+        component: "media-video",
+        property: "src"
+      },
+      {
+        component: "media-image",
+        property: "src"
       }
     ],
     nonAuthorizedComponents: [
@@ -195,6 +211,14 @@ function registerNetworkSchemas() {
       {
         component: "media-pdf",
         property: "index"
+      },
+      {
+        component: "media-video",
+        property: "src"
+      },
+      {
+        component: "media-image",
+        property: "src"
       }
     ],
     nonAuthorizedComponents: [
