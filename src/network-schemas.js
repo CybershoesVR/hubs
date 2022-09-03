@@ -119,6 +119,10 @@ function registerNetworkSchemas() {
       {
         component: "media-image",
         property: "src"
+      },
+      {
+        component: "media-image",
+        property: "version"
       }
     ],
     nonAuthorizedComponents: [
@@ -185,6 +189,10 @@ function registerNetworkSchemas() {
       {
         component: "media-image",
         property: "src"
+      },
+      {
+        component: "media-image",
+        property: "version"
       }
     ],
     nonAuthorizedComponents: [
